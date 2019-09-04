@@ -5,4 +5,9 @@ RUN wget https://get.symfony.com/cli/installer -O - | bash
 RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
 
 CMD symfony server:start
+
+RUN apk add --no-cache $PHPIZE_DEPS \
+    && apk add zlib-dev \
+    && pecl install grpc \
+    && docker-php-ext-enable grpc
 WORKDIR /var/www/beer

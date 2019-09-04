@@ -29,6 +29,45 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
+    "firebase/php-jwt": {
+        "version": "v5.0.0"
+    },
+    "google/auth": {
+        "version": "v1.5.2"
+    },
+    "google/cloud-core": {
+        "version": "v1.32.0"
+    },
+    "google/cloud-firestore": {
+        "version": "v1.7.1"
+    },
+    "google/common-protos": {
+        "version": "1.1"
+    },
+    "google/gax": {
+        "version": "1.1.1"
+    },
+    "google/grpc-gcp": {
+        "version": "0.1.4"
+    },
+    "google/protobuf": {
+        "version": "v3.9.1"
+    },
+    "grpc/grpc": {
+        "version": "1.22.0"
+    },
+    "guzzlehttp/guzzle": {
+        "version": "6.3.3"
+    },
+    "guzzlehttp/promises": {
+        "version": "v1.3.1"
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.6.1"
+    },
+    "monolog/monolog": {
+        "version": "1.24.0"
+    },
     "nelmio/cors-bundle": {
         "version": "1.5",
         "recipe": {
@@ -47,8 +86,20 @@
     "psr/container": {
         "version": "1.0.0"
     },
+    "psr/http-message": {
+        "version": "1.0.1"
+    },
     "psr/log": {
         "version": "1.1.0"
+    },
+    "ralouphie/getallheaders": {
+        "version": "3.0.3"
+    },
+    "ramsey/uuid": {
+        "version": "3.8.0"
+    },
+    "rize/uri-template": {
+        "version": "0.3.2"
     },
     "sensio/framework-extra-bundle": {
         "version": "5.2",

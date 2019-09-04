@@ -4,7 +4,7 @@ services:
   symfony:
     image: cocoders/phpers-summit-2019-symfony
     environment:
-      - GOOGLE_APPLICATION_CREDENTIALS=/var/www/beer-menu/key/key.json
+      - GOOGLE_APPLICATION_CREDENTIALS=/var/www/beer/key/key.json
       - VIRTUAL_HOST=beer.local
       - VIRTUAL_PORT=8000
     expose:
