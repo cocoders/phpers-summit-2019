@@ -14,6 +14,8 @@ services:
     networks:
       - default
       - nginx-proxy
+    command: >
+      bash -c "symfony composer install && symfony server:start"
 
   angular:
     image: cocoders/phpers-summit-2019-angular
@@ -27,6 +29,8 @@ services:
     environment:
       - VIRTUAL_HOST=frontend.beer.local
       - VIRTUAL_PORT=4200
+    command: >
+      bash -c "npm install && ng serve --host 0.0.0.0 --port 4200 --disable-host-check --public-host=frontend.beer.local"
 
   nginx-proxy:
     image: jwilder/nginx-proxy:alpine
