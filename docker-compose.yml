@@ -1,0 +1,50 @@
+version: '3.7'
+
+services:
+  symfony:
+    image: cocoders/phpers-summit-2019-symfony
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/var/www/beer-menu/key/key.json
+      - VIRTUAL_HOST=beer.local
+      - VIRTUAL_PORT=8000
+    expose:
+      - "8000"
+    volumes:
+      - ./symfony/:/var/www/beer
+    networks:
+      - default
+      - nginx-proxy
+
+  angular:
+    image: cocoders/phpers-summit-2019-angular
+    volumes:
+      - ./angular/:/var/www/beer
+    networks:
+      - default
+      - nginx-proxy
+    expose:
+      - "4200"
+    environment:
+      - VIRTUAL_HOST=frontend.beer.local
+      - VIRTUAL_PORT=4200
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - default
+      - nginx-proxy
+
+  whoami:
+    image: jwilder/whoami
+    networks:
+      - default
+      - nginx-proxy
+
+networks:
+  nginx-proxy:
+    external:
+      name: nginx-proxy
