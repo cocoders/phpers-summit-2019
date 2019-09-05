@@ -6,6 +6,10 @@ This is project created for the PHPers 2019 workshop about real time processing 
 
 Project using docker (at least 19.09) and docker-compose.
 
+We have all in one init script using `make init` command.
+
+If you do not want to use `Makefile` and `make` then you need to execute following scripts.
+
 To setup project add `frontend.beer.local` and `beer.local` into `/etc/hosts`
 like following:
 

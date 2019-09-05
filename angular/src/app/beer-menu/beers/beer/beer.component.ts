@@ -8,12 +8,4 @@ import { Beer } from '../beer';
 })
 export class BeerComponent {
   @Input() beer: Beer;
-
-  photoName(name: string): string {
-    if  (!name) {
-      return '';
-    }
-
-    return name.replace(' ', '_').toLowerCase();
-  }
 }

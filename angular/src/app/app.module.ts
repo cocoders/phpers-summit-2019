@@ -13,6 +13,7 @@ import { BeersComponent } from './beer-menu/beers/beers.component';
 import { FooterComponent } from './beer-menu/footer/footer.component';
 import { HeaderComponent } from './beer-menu/header/header.component';
 import { BeerComponent } from './beer-menu/beers/beer/beer.component';
+import { PhotoNamePipe } from './beer-menu/beers/beer/photo-name.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BeerComponent } from './beer-menu/beers/beer/beer.component';
     BeersComponent,
     FooterComponent,
     HeaderComponent,
-    BeerComponent
+    BeerComponent,
+    PhotoNamePipe
   ],
   imports: [
     BrowserModule,
