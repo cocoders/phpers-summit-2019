@@ -1,0 +1,5 @@
+<figure>
+    <img *ngIf="beer" src="assets/beers/{{photoName(beer?.name)}}.png" alt="Several friends doing a toast">
+    <figcaption><h3>{{beer?.name}}</h3></figcaption>
+</figure>
+<p>{{beer?.description}}</p>
