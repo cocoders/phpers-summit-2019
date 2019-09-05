@@ -27,3 +27,5 @@ You can use `sudo make init` command instead which is doing all following things
 * Run `docker-compose up -d`
 
 Enter in the browser to `http://frontend.beer.local/test` address
+
+Slides for this repo: https://slides.com/leszekprabucki/phpers-summit-2019
